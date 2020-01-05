@@ -18,9 +18,8 @@
 
       name: 'deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/{{ os }} {{ codename }}/mongodb-org/RELEASE {{ comp or '' }}'
       file: /etc/apt/sources.list.d/mongodb-org-RELEASE.list
-      keyid: 9DA31620334BD75D9DCB49F368818C72E52529D4
-      keyserver: hkp://keyserver.ubuntu.com:80
       from_repo_value: '{{ codename }}'
+      key_url: 'https://www.mongodb.org/static/pgp/server-RELEASE.asc'
 
     {%- else %}
 
